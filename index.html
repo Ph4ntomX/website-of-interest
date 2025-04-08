@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kanto Region</title>
+
+    <!-- Bootstrap Loading -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom Loading -->
+    <link rel="stylesheet" href="styling/home/style.css">
+    <script src="styling/home/functions.js"></script>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #ffffff;
+            background-image: linear-gradient(rgba(255, 0, 0, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 0, 0, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #333333;
+        }
+    </style>
+</head>
+
+<body>
+    <embed src="/styling/home/theme.mp3" loop="true" autostart="true" volume="0.1"  width="2" height="0"></embed>
+
+    <header class="fixed-top">
+        <!-- Right Sidebar -->
+        <div id="right-sidebar" class="position-fixed top-0 end-0 bg-white vh-100 p-3">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="m-0">Navigation</h4>
+                <button class="btn btn-close btn-close-black" id="close-right-sidebar"></button>
+            </div>
+
+            <ul class="nav flex-column gap-2">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/starters.html">Starters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pokedex.html">Pokedex</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/games.html">Games</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="pokedex-header navbar navbar-expand-lg">
+            <div class="d-flex gap-5 justify-content-between justify-content-lg-start">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/pokemon.png" alt="Pokémon Logo">
+                </a>
+
+                
+                <nav class="navbar-nav flex-row collapse navbar-collapse">
+                    <a class="nav-link px-3" href="/index.html">Home</a>
+                    <a class="nav-link px-3" href="/starters.html">Starters</a>
+                    <a class="nav-link px-3" href="/pokedex.html">Pokedex</a>
+                    <a class="nav-link px-3" href="/games.html">Games</a>
+                </nav>
+            </div>
+            
+            <div class="credits d-none d-lg-block">
+                <p class="m-0">Made by Tengku Hamza</p>
+            </div>
+
+            <button class="navbar-toggler" id="show-right-sidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-gradient">
+            <img class="w-100 rugged-line" src="https://pokemonletsgo.pokemon.com/assets/img/common/bg-curved-rough-edge.svg" alt="">
+        </div>
+
+        <div class="container text-center text-white scroll-animate">
+            <h1 class="text-white display-3 text-shadow">Welcome to the Kanto Region</h1>
+            <p class="fs-1 text-shadow">The beginning of every trainer's journey</p>
+
+            <div class="flex-grow-1"></div>
+        </div>
+    </section>
+
+    <section id="intro" class="py-5">
+        <div class="container">
+            <div class="row g-2 scroll-animate">
+                <div class="col-12 col-lg-3 d-flex justify-content-center">
+                    <img class="big-hover" src="/assets/professor-oak.png" alt="Professor Oak">
+                </div>
+
+                <div class="col-12 col-lg-9 d-flex flex-column align-items-center text-center">
+                    <h2>About Kanto</h2>
+                    <h4>Kanto was the first region introduced in the Pokémon world, making its debut in 1996.</h4>
+                    <h4>This eastern region draws inspiration from the real-life Kantō region of Japan.</h4>
+                    <img class="img-fluid" src="assets/map.png" alt="Kanto in Japan">
+                    <h4>Kanto has been featured in various Pokémon games and media.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gyms-and-cities" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Kanto Gyms and Cities</h2>
+            <div class="row g-4">
+                <!-- Pewter City -->
+                <div class="col-12 scroll-animate">
+                    <div class="gym-city-card">
+                        <div class="gradient-title pewter d-flex align-items-center">
+                            <img src="assets/badges/boulder.webp" alt="Boulder Badge" class="badge-icon">
+                            <h3 class="ms-3 text-white">Pewter City - Brock</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-center">
+                                <img src="assets/gym-leaders/brock.png" alt="Brock" class="gym-leader-img">
+                            </div>
+                            <div class="col-md-9 d-flex flex-column align-items-center gap-2 text-center">
+                                <h4 class="mb-0 mt-4">Pewter City sits at the foot of a great stone mountain.</h4> 
+                                <img class="city-img pewter" src="assets/city-images/pewter.png" alt="Cerulean City">
+                                <p>Here you can find the Pewter Museum of Science, which has many Fossils on display.</p>
+
+                                <h4 class="mt-4"> Brock, the Pewter City Gym Leader, specializes in Rock-type Pokémon.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cerulean City -->
+                <div class="col-12 scroll-animate">
+                    <div class="gym-city-card">
+                        <div class="gradient-title cerulean d-flex align-items-center">
+                            <img src="assets/badges/cascade.webp" alt="Cascade Badge" class="badge-icon">
+                            <h3 class="ms-3 text-white">Cerulean City - Misty</h3>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-3 text-center">
+                                <img src="assets/gym-leaders/misty.webp" alt="Misty" class="gym-leader-img">
+                            </div>
+                            <div class="col-md-9 d-flex flex-column align-items-center gap-2 text-center">
+                                <h4 class="mb-0 mt-4">Cerulean City is known for its beautiful water features.</h4>
+                                <img class="city-img cerulean" src="assets/city-images/cerulean.png" alt="Cerulean City">
+                                <p>Here you can find the Bike Shop, which can make your travels easier in the games.</p>
+                                <h4 class="mt-4">Misty, the Cerulean City Gym Leader, is a master of Water-type Pokémon.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vermilion City -->
+                <div class="col-12 scroll-animate">
+                    <div class="gym-city-card">
+                        <div class="gradient-title vermilion d-flex align-items-center">
+                            <img src="assets/badges/thunder.png" alt="Thunder Badge" class="badge-icon">
+                            <h3 class="ms-3 text-white">Vermilion City - Lt. Surge</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-center">
+                                <img src="assets/gym-leaders/lt-surge.png" alt="Lt. Surge" class="gym-leader-img">
+                            </div>
+                            <div class="col-md-9 d-flex flex-column align-items-center gap-2 text-center">
+                                <h4 class="mb-0 mt-4">Vermilion City is a bustling port city.</h4>
+                                <img class="city-img vermilion" src="assets/city-images/vermilion.png" alt="Vermilion City">
+                                <p>This port city is home to the S.S. Anne, a luxurious cruise ship that only docks here once.</p>
+                                <h4 class="mt-4">It is also home to the Electric-type Gym Leader, Lt. Surge.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Celadon City -->
+                <div class="col-12 scroll-animate">
+                    <div class="gym-city-card">
+                        <div class="gradient-title celadon d-flex align-items-center">
+                            <img src="assets/badges/rainbow.png" alt="Rainbow Badge" class="badge-icon">
+                            <h3 class="ms-3 text-white">Celadon City - Erika</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-center">
+                                <img src="assets/gym-leaders/erika.png" alt="Erika" class="gym-leader-img">
+                            </div>
+                            <div class="col-md-9 d-flex flex-column align-items-center gap-2 text-center">
+                                <h4 class="mb-0 mt-4">Celadon City is known for its large department store.</h4>
+                                <img class="city-img celadon" src="assets/city-images/celadon.png" alt="Celadon City">
+                                <p>One of the largest cities in Kanto, Celadon is secretly home to a Team Rocket hideout.</p>
+                                <h4 class="mt-4">Erika, the Gym Leader, specializes in Grass-type Pokémon.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fuchsia City -->
+                <div class="col-12 scroll-animate">
+                    <div class="gym-city-card">
+                        <div class="gradient-title fuchsia d-flex align-items-center">
+                            <img src="assets/badges/soul.png" alt="Soul Badge" class="badge-icon">
+                            <h3 class="ms-3 text-white">Fuchsia City - Koga</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-center">
+                                <img src="assets/gym-leaders/koga.webp" alt="Koga" class="gym-leader-img">
+                            </div>
+                            <div class="col-md-9 d-flex flex-column align-items-center gap-2 text-center">
+                                <h4 class="mb-0 mt-4">Fuchsia City is home to the Safari Zone.</h4>
+                                <img class="city-img fuchsia" src="assets/city-images/fuchsia.png" alt="Fuchsia City">
+                                <p>This city also has the Pokémon Zoo, where trainers can view rare Pokémon up close before exploring the Safari Zone.</p>
+                                <h4 class="mt-4">Koga, the Gym Leader, is a master of Poison-type Pokémon.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Saffron City -->
+                <div class="col-12 scroll-animate">
+                    <div class="gym-city-card">
+                        <div class="gradient-title saffron d-flex align-items-center">
+                            <img src="assets/badges/marsh.png" alt="Marsh Badge" class="badge-icon">
+                            <h3 class="ms-3 text-white">Saffron City - Sabrina</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-center">
+                                <img src="assets/gym-leaders/sabrina.webp" alt="Sabrina" class="gym-leader-img">
+                            </div>
+                            <div class="col-md-9 d-flex flex-column align-items-center gap-2 text-center">
+                                <h4 class="mb-0 mt-4">Saffron City is the largest city in Kanto.</h4>
+                                <img class="city-img saffron" src="assets/city-images/saffron.png" alt="Saffron City">
+                                <p>A major city in the center of Kanto. It contains the Silph Co. building, targeted by Team Rocket for its technology.</p>
+                                <h4 class="mt-4">Sabrina, the Gym Leader, specializes in Psychic-type Pokémon.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cinnabar Island -->
+                <div class="col-12 scroll-animate">
+                    <div class="gym-city-card">
+                        <div class="gradient-title cinnabar d-flex align-items-center">
+                            <img src="assets/badges/volcano.png" alt="Volcano Badge" class="badge-icon">
+                            <h3 class="ms-3 text-white">Cinnabar Island - Blaine</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-center">
+                                <img src="assets/gym-leaders/blaine.webp" alt="Blaine" class="gym-leader-img">
+                            </div>
+                            <div class="col-md-9 d-flex flex-column align-items-center gap-2 text-center">
+                                <h4 class="mb-0 mt-4">Cinnabar Island is known for its volcanic activity.</h4>
+                                <img class="city-img cinnabar" src="assets/city-images/cinnabar.png" alt="Cinnabar Island">
+                                <p>This city has the Pokémon Lab, where scientists revived ancient Pokémon from fossils.</p>
+                                <h4 class="mt-4">Blaine, the Gym Leader, is a master of Fire-type Pokémon.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Viridian City -->
+                <div class="col-12 scroll-animate">
+                    <div class="gym-city-card">
+                        <div class="gradient-title viridian d-flex align-items-center">
+                            <img src="assets/badges/earth.png" alt="Earth Badge" class="badge-icon">
+                            <h3 class="ms-3 text-white real">Viridian City - Giovanni</h3>
+                            <h3 class="ms-3 text-white hide">Viridian City - ???</h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3 text-center">
+                                <img src="assets/gym-leaders/giovanni.webp" alt="Giovanni" class="gym-leader-img">
+                            </div>
+                            <div class="col-md-9 d-flex flex-column align-items-center gap-2 text-center">
+                                <h4 class="mb-0 mt-4">Viridian City is a quiet town with a mysterious Gym.</h4>
+                                <img class="city-img viridian" src="assets/city-images/viridian.png" alt="Viridian City">
+                                <p>This city houses the final Gym in the Kanto League.</p>
+                                <h4 class="mt-4 real">Giovanni, the Gym Leader, specializes in Ground-type Pokémon.</h4>
+                                <h4 class="mt-4 hide">The Gym Leader specializes in Ground-type Pokémon.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" class="py-3">
+        <div class="container text-center">
+            <a href="/starters.html" class="btn btn-danger fs-3 mt-0 mb-3">Check out Starters >></a>
+            <h2 class="m-0">Credits</h2>
+            <p class="m-0">All images are sourced from the Pokémon franchise and are used for educational purposes.</p>
+            <p class="m-0">Pokémon is a trademark of Nintendo, Game Freak, and Creatures Inc.</p>
+            <p>&copy; 2025 Tengku Hamza. All rights reserved.</p>
+        </div>
+    </section>
+</body>
+
+</html>

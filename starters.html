@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanto's Starter Pokemon</title>
+
+    <!-- Bootstrap Loading -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- Custom Loading -->
+    <link rel="stylesheet" href="styling/starters/style.css">
+    <script src="styling/starters/functions.js"></script>
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+
+    <!-- Custom Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #ffffff;
+            background-image: linear-gradient(rgba(255, 0, 0, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 0, 0, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            color: #333333;
+        }
+    </style>
+</head>
+
+<body>
+    <embed src="/styling/starters/theme.mp3" loop="true" autostart="true" volume="0.2"  width="2" height="0"></embed>
+
+    <header class="fixed-top">
+        <!-- Right Sidebar -->
+        <div id="right-sidebar" class="position-fixed top-0 end-0 bg-white vh-100 p-3">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h4 class="m-0">Navigation</h4>
+                <button class="btn btn-close btn-close-black" id="close-right-sidebar"></button>
+            </div>
+
+            <ul class="nav flex-column gap-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="/starters.html">Starters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pokedex.html">Pokedex</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/games.html">Games</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="pokedex-header navbar navbar-expand-lg">
+            <div class="d-flex gap-5 justify-content-between justify-content-lg-start">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/pokemon.png" alt="Pokémon Logo">
+                </a>
+
+                
+                <nav class="navbar-nav flex-row collapse navbar-collapse">
+                    <a class="nav-link px-3" href="/index.html">Home</a>
+                    <a class="nav-link px-3" href="/starters.html">Starters</a>
+                    <a class="nav-link px-3" href="/pokedex.html">Pokedex</a>
+                    <a class="nav-link px-3" href="/games.html">Games</a>
+                </nav>
+            </div>
+            
+            <div class="credits d-none d-lg-block">
+                <p class="m-0">Made by Tengku Hamza</p>
+            </div>
+
+            <button class="navbar-toggler" id="show-right-sidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </header>
+
+    <section id="hero" class="py-5 d-flex align-items-center justify-content-center scroll-animate">
+        <div class="container text-center">
+            <h1>The Starter Pokemon.. Choose One!</h1>
+
+            <div class="row">
+                <div class="col-12 col-xl-4 mt-xl-big">
+                    <div class="starter card">
+                        <div class="pic-holder">
+                            <img src="assets/starters/Venusaur.gif" class="card-img-top" alt="Starter 1">
+                        </div>
+                        <div class="card-body text-start px-5">
+                            <p class="card-text m-0 fs-4">#003</p>
+                            <h5 class="card-title fs-3">VENUSAUR</h5>
+                            <div class="mb-4">
+                                <span class="badge bg-grass p-2">GRASS</span>
+                                <span class="badge bg-poison p-2">POISON</span>
+                            </div>
+                            <a href="#venusaur" class="btn btn-danger">CHOOSE!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-4 mt-xl-big">
+                    <div class="starter card">
+                        <div class="pic-holder">
+                            <img src="assets/starters/Charizard.gif" class="card-img-top extra-scale" alt="Starter 1">
+                        </div>
+                        <div class="card-body text-start px-5">
+                            <p class="card-text m-0 fs-4">#006</p>
+                            <h5 class="card-title fs-3">CHARIZARD</h5>
+                            <div class="mb-4">
+                                <span class="badge bg-fire p-2">FIRE</span>
+                                <span class="badge bg-flying p-2">FLYING</span>
+                            </div>
+                            <a href="#charizard" class="btn btn-danger">CHOOSE!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-4 mt-xl-big">
+                    <div class="starter card">
+                        <div class="pic-holder">
+                            <img src="assets/starters/Blastoise.gif" class="card-img-top" alt="Starter 1">
+                        </div>
+                        <div class="card-body text-start px-5">
+                            <p class="card-text m-0 fs-4">#009</p>
+                            <h5 class="card-title fs-3">BLASTOISE</h5>
+                            <div class="mb-4">
+                                <span class="badge bg-water p-2">WATER</span>
+                            </div>
+                            <a href="#blastoise" class="btn btn-danger">CHOOSE!</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="starters" class="p-4">
+        <div class="container text-white rounded p-3 bg-grass mb-5 scroll-animate" id="venusaur">
+            <div class="row">
+                <div class="col-lg-4 col-12 z-1">
+                    <img class="pokemon-image" src="assets/starters/Venusaur.gif" alt="Venusaur">
+                </div>
+
+                <div class="col-lg-8 col-12 text-white z-1">
+                    <h5 class="m-0">#003</h5>
+                    <h1>Venusaur</h1>
+                    <p class="mt-3">Venusaur is a Grass/Poison type Pokémon. Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.</p>
+                    <div class="d-flex gap-4 mt-3">
+                        <div>
+                            <h5 class="text-uppercase">Height</h5>
+                            <p class="m-0">1.7 m</p>
+                        </div>
+                        <div>
+                            <h5 class="text-uppercase">Weight</h5>
+                            <p class="m-0">84.5 kg</p>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4">Base Stats</h5>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="text-center">
+                            <div class="badge bg-danger rounded-pill px-3 py-2 text-black border border-2 border-white">HP</div>
+                            <p class="m-0">80</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">ATK</div>
+                            <p class="m-0">82</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">DEF</div>
+                            <p class="m-0">83</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpATK</div>
+                            <p class="m-0">100</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpDEF</div>
+                            <p class="m-0">100</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-primary rounded-pill px-3 py-2 text-black border border-2 border-white">SPEED</div>
+                            <p class="m-0">80</p>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="badge bg-success-subtle rounded-pill px-3 py-2 text-black border border-2 border-white">TOTAL</div>
+                            <p class="m-0">524</p>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4">Mega Stats</h5>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="text-center">
+                            <div class="badge bg-danger rounded-pill px-3 py-2 text-black border border-2 border-white">HP</div>
+                            <p class="m-0">80</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">ATK</div>
+                            <p class="m-0">100</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">DEF</div>
+                            <p class="m-0">123</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpATK</div>
+                            <p class="m-0">122</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpDEF</div>
+                            <p class="m-0">120</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-primary rounded-pill px-3 py-2 text-black border border-2 border-white">SPEED</div>
+                            <p class="m-0">80</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-success-subtle rounded-pill px-3 py-2 text-black border border-2 border-white">TOTAL</div>
+                            <p class="m-0">625</p>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4">Evolution</h5>
+
+                    <div class="d-flex align-items-center gap-2 w-100">
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/bulbasaur.png" alt="Bulbasaur" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                        <div>
+                            <div class="badge bg-dark-subtle text-secondary rounded-4 p-2 d-sm-block d-none">Lv 16</div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/ivysaur.png" alt="Ivysaur" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                        <div>
+                            <div class="badge bg-dark-subtle text-secondary rounded-4 p-2 d-sm-block d-none">Lv 32</div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/venusaur.png" alt="Venusaur" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                        <div>
+                            <div class="badge bg-dark-subtle text-secondary rounded-4 p-2 d-sm-block d-none">Mega</div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/venusaur-mega.png" alt="Venusaur Mega Form" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-white rounded p-3 bg-fire mb-5 scroll-animate" id="charizard">
+            <div class="row">
+                <div class="col-lg-4 col-12 z-1">
+                    <img class="pokemon-image" src="assets/starters/Charizard.gif" alt="Charizard">
+                </div>
+                <div class="col-lg-8 col-12 text-white z-1">
+                    <h5 class="m-0">#006</h5>
+                    <h1>Charizard</h1>
+                    <p class="mt-3">Charizard is a Fire/Flying type Pokémon. It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.</p>
+                    <div class="d-flex gap-4 mt-3">
+                        <div>
+                            <h5 class="text-uppercase">Height</h5>
+                            <p class="m-0">1.7 m</p>
+                        </div>
+                        <div>
+                            <h5 class="text-uppercase">Weight</h5>
+                            <p class="m-0">90.5 kg</p>
+                        </div>
+                    </div>
+                    <h5 class="mt-4">Base Stats</h5>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="text-center">
+                            <div class="badge bg-danger rounded-pill px-3 py-2 text-black border border-2 border-white">HP</div>
+                            <p class="m-0">78</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">ATK</div>
+                            <p class="m-0">84</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">DEF</div>
+                            <p class="m-0">78</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpATK</div>
+                            <p class="m-0">109</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpDEF</div>
+                            <p class="m-0">85</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-primary rounded-pill px-3 py-2 text-black border border-2 border-white">SPEED</div>
+                            <p class="m-0">100</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-success-subtle rounded-pill px-3 py-2 text-black border border-2 border-white">TOTAL</div>
+                            <p class="m-0">534</p>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4">Mega Stats (X)</h5>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="text-center">
+                            <div class="badge bg-danger rounded-pill px-3 py-2 text-black border border-2 border-white">HP</div>
+                            <p class="m-0">78</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">ATK</div>
+                            <p class="m-0">130</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">DEF</div>
+                            <p class="m-0">111</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpATK</div>
+                            <p class="m-0">130</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpDEF</div>
+                            <p class="m-0">85</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-primary rounded-pill px-3 py-2 text-black border border-2 border-white">SPEED</div>
+                            <p class="m-0">100</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-success-subtle rounded-pill px-3 py-2 text-black border border-2 border-white">TOTAL</div>
+                            <p class="m-0">634</p>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4">Mega Stats (Y)</h5>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="text-center">
+                            <div class="badge bg-danger rounded-pill px-3 py-2 text-black border border-2 border-white">HP</div>
+                            <p class="m-0">78</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">ATK</div>
+                            <p class="m-0">104</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">DEF</div>
+                            <p class="m-0">78</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpATK</div>
+                            <p class="m-0">159</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpDEF</div>
+                            <p class="m-0">115</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-primary rounded-pill px-3 py-2 text-black border border-2 border-white">SPEED</div>
+                            <p class="m-0">100</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-success-subtle rounded-pill px-3 py-2 text-black border border-2 border-white">TOTAL</div>
+                            <p class="m-0">634</p>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4">Evolution</h5>
+                    <div class="d-flex align-items-center gap-2 w-100">
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/charmander.png" alt="Charmander" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                        <div>
+                            <div class="badge bg-dark-subtle text-secondary rounded-4 p-2 d-sm-block d-none">Lv 16</div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/charmeleon.png" alt="Charmeleon" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                        <div>
+                            <div class="badge bg-dark-subtle text-secondary rounded-4 p-2 d-sm-block d-none">Lv 36</div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/charizard.png" alt="Charizard" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                        <div>
+                            <div class="badge bg-dark-subtle text-secondary rounded-4 p-2 d-sm-block d-none">Mega</div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/charizard-mega-x.png" alt="Charizard Mega Form" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/charizard-mega-y.png" alt="Charizard Mega Form" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-white rounded p-3 bg-water mb-5 scroll-animate" id="blastoise">
+            <div class="row">
+                <div class="col-lg-4 col-12 z-1">
+                    <img class="pokemon-image" src="assets/starters/Blastoise.gif" alt="Blastoise">
+                </div>
+                <div class="col-lg-8 col-12 text-white z-1">
+                    <h5 class="m-0">#009</h5>
+                    <h1>Blastoise</h1>
+                    <p class="mt-3">Blastoise is a Water type Pokémon. It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.</p>
+                    <div class="d-flex gap-4 mt-3">
+                        <div>
+                            <h5 class="text-uppercase">Height</h5>
+                            <p class="m-0">1.6 m</p>
+                        </div>
+                        <div>
+                            <h5 class="text-uppercase">Weight</h5>
+                            <p class="m-0">85.5 kg</p>
+                        </div>
+                    </div>
+                    <h5 class="mt-4">Base Stats</h5>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="text-center">
+                            <div class="badge bg-danger rounded-pill px-3 py-2 text-black border border-2 border-white">HP</div>
+                            <p class="m-0">79</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">ATK</div>
+                            <p class="m-0">83</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">DEF</div>
+                            <p class="m-0">100</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpATK</div>
+                            <p class="m-0">85</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpDEF</div>
+                            <p class="m-0">105</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-primary rounded-pill px-3 py-2 text-black border border-2 border-white">SPEED</div>
+                            <p class="m-0">78</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-success-subtle rounded-pill px-3 py-2 text-black border border-2 border-white">TOTAL</div>
+                            <p class="m-0">530</p>
+                        </div>
+                    </div>
+                    <h5 class="mt-4">Mega Stats</h5>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="text-center">
+                            <div class="badge bg-danger rounded-pill px-3 py-2 text-black border border-2 border-white">HP</div>
+                            <p class="m-0">79</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">ATK</div>
+                            <p class="m-0">103</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-warning rounded-pill px-3 py-2 text-black border border-2 border-white">DEF</div>
+                            <p class="m-0">120</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpATK</div>
+                            <p class="m-0">135</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-info rounded-pill px-3 py-2 text-black border border-2 border-white">SpDEF</div>
+                            <p class="m-0">115</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-primary rounded-pill px-3 py-2 text-black border border-2 border-white">SPEED</div>
+                            <p class="m-0">78</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="badge bg-success-subtle rounded-pill px-3 py-2 text-black border border-2 border-white">TOTAL</div>
+                            <p class="m-0">630</p>
+                        </div>
+                    </div>
+                    <h5 class="mt-4">Evolution</h5>
+                    <div class="d-flex align-items-center gap-2 w-100">
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/squirtle.png" alt="Squirtle" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                        <div>
+                            <div class="badge bg-dark-subtle text-secondary rounded-4 p-2 d-sm-block d-none">Lv 16</div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/wartortle.png" alt="Wartortle" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                        <div>
+                            <div class="badge bg-dark-subtle text-secondary rounded-4 p-2 d-sm-block d-none">Lv 36</div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/blastoise.png" alt="Blastoise" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                        <div>
+                            <div class="badge bg-dark-subtle text-secondary rounded-4 p-2 d-sm-block d-none">Mega</div>
+                        </div>
+                        <div class="flex-grow-1">
+                            <img src="assets/sprites/blastoise-mega.png" alt="Blastoise Mega Form" class="w-100" style="height: auto; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" class="py-3">
+        <div class="container text-center">
+            <a href="/pokedex.html" class="btn btn-danger fs-3 mt-0 mb-3">Check out Pokedex >></a>
+            <h2 class="m-0">Credits</h2>
+            <p class="m-0">All images are sourced from the Pokémon franchise and are used for educational purposes.</p>
+            <p class="m-0">Pokémon is a trademark of Nintendo, Game Freak, and Creatures Inc.</p>
+            <p>&copy; 2025 Tengku Hamza. All rights reserved.</p>
+        </div>
+    </section>
+</body>
+
+</html>

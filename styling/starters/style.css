@@ -148,7 +148,7 @@ section::before {
 }
 
 #venusaur, #charizard, #blastoise {
-    position: relative;;
+    position: relative;
 }
 
 #venusaur::before, #charizard::before, #blastoise::before {

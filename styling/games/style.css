@@ -134,3 +134,21 @@ section::before {
 
     transform: scaleX(-1);
 }
+
+.game-card {
+    position: relative;
+}
+
+.game-card::before {
+    z-index: 0;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url("https://st2.depositphotos.com/7507618/12045/v/450/depositphotos_120454410-stock-illustration-pokeball-seamless-pattern.jpg");
+    background-position: center;
+    opacity: 0.05;
+}

@@ -106,6 +106,7 @@ section::before {
 
 .dex-entry {
     position: relative;
+    transition: scale 0.3s ease;
 }
 
 .dex-entry::before {
@@ -129,6 +130,10 @@ section::before {
 
 .dex-entry .pic-holder {
     margin-bottom: -15%;
+}
+
+.dex-entry:hover {
+    scale: 1.05;
 }
 
 .bg-grass {
